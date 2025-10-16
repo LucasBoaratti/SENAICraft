@@ -1,0 +1,13 @@
+1. Escolha de tema livre;
+
+2. Mudar as imagens;
+
+3. Mudar as perguntas, mas manter no estilo SENAI envolvendo as matérias, alunos etc;
+
+4. Estilizar do nosso jeito;
+
+5. Manter a responsividade;
+
+6. Aplicar CleanCode;
+
+7. Aplicar ARIA!;
