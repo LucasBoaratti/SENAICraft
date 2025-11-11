@@ -15,14 +15,14 @@ export function Menu() {
                     </figure>
                 </li>
                 </Link>
-                
+                <Link to = 'inventario'>
                 <li>
                     <figure>
                         <img src={bau} alt="Inventário" />
                         <figcaption>Inventário</figcaption>
                     </figure>
-                    
                 </li>
+                </Link>
                 <li>
                     <figure>
                         <img src={mapa} alt="GeoLocalização" />
