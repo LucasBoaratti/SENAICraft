@@ -29,14 +29,14 @@ export function Menu() {
                         <figcaption>GeoLocalização</figcaption>
                     </figure>
                 </li>
-                 <li>
-                    
-                    <figure>
-                        <img src={camera} alt="camera" />
-                        <figcaption>Camera</figcaption>
-                    </figure>
-                    
-                </li>
+                <Link to="camera">
+                    <li>
+                        <figure>
+                            <img src={camera} alt="camera" />
+                            <figcaption>Camera</figcaption>
+                        </figure>
+                    </li>
+                </Link>
             </ul>
         </div>
     )
