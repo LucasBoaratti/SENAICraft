@@ -1,4 +1,4 @@
-export function MissaoCard({ missao, onIniciarMissao,concluida  }) {
+export function PerguntasCard({ missao, onIniciarMissao,concluida  }) {
   return (
     <article className='missao-card'>
       <h3 id={missao.id}>{missao.titulo}</h3>

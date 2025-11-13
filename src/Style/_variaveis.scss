@@ -1,5 +1,6 @@
 // Definindo as variáveis fixas
 $bloco-diamante: #57ECFA;
+$bloco-diamante-opaco: rgb(87, 236, 250, 0.8);
 $netherrack: #B02E26;
 $verde-limao: #B2F751;
 $cor-fonte-escura: #000000;
@@ -7,13 +8,14 @@ $cor-fonte-clara: #FFFFFF;
 $cor-active-botao: #FFE900;
 $opacidade-fundo: rgb(45, 43, 43, 0.7);
 $fonte-titulos: "Super Pixel", sans-serif;
-$fonte-geral: "Comic Sans MS";
+$fonte-geral: "Comic Sans MS", sans-serif;
 
 // Estilização geral
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: $fonte-geral;
 }
 
 // Estilização do wallpaper geral das páginas

@@ -5,6 +5,7 @@
 .boasVindas {
     margin: 0 auto;
     max-width: 90rem;
+    overflow-y: auto;
 
     .introducao {
         display: flex;
@@ -47,6 +48,41 @@
             .botao:hover {
                 background: transparent;
                 background-color: rgb(101, 107, 118, 0.9);
+            }
+        }
+    }
+}
+
+// Responsividade para telas com 1440px de largura
+@media screen and (max-width: 1440px) {
+    .boasVindas {
+        margin: 0 auto;
+        max-width: 90rem;
+        overflow-y: auto;
+
+        .introducao {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 1.25rem;
+
+            .textoBoasVindas {
+                color: $cor-fonte-clara;
+                font-family: $fonte-titulos;
+                font-size: 2.5rem;
+                margin-bottom: 10px;
+            }
+
+            .logo {
+                width: 46.875rem;
+                height: 21.875rem;
+            }
+
+            .botaoIniciar {
+                display: flex;
+                justify-content: center;
+                margin-top: 4.375rem;
             }
         }
     }
