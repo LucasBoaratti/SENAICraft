@@ -25,14 +25,14 @@
   }
 
   .figurinha {
-    background: $card;
+
     border-radius: 12px;
     padding: 1rem;
     box-shadow: 0 0 8px rgba(0,0,0,0.4);
     transition: transform 0.2s;
     width: 100%;
     max-width: 150px;
-    color:$fundo;
+
 
     &:hover {
       transform: scale(1.05);

@@ -1,61 +1,49 @@
-$fundo: #04010f;
-$claro: #f0ebeb;
-$card:#dcdff2;
-$sombrasBox: 0 4px 10px rgba(0, 0, 0, 0.3);
-$destaque-rosa: #ff3d7f transparent;
-$gradiente-rosa: linear-gradient(135deg, #2f1048, #e4018d);
-$foco: #4c0f32;
-$botao-azul: linear-gradient(135deg, #2cd0e5, #2553af);
-$botao-amarelo: linear-gradient(135deg, #b9820b, #ede203);
-$box-fundo: rgba(0, 0, 0, 0.8);
-$borda: 1px solid $fundo;
+// Definindo as variáveis fixas
+$bloco-diamante: #57ECFA;
+$netherrack: #B02E26;
+$verde-limao: #B2F751;
+$cor-fonte-escura: #000000;
+$cor-fonte-clara: #FFFFFF;
+$cor-active-botao: #FFE900;
+$opacidade-fundo: rgb(45, 43, 43, 0.7);
+$fonte-titulos: "Super Pixel", sans-serif;
+$fonte-geral: "Comic Sans MS";
 
-
+// Estilização geral
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+// Estilização do wallpaper geral das páginas
 body {
-  background-color: $fundo;
-  width: 100vw;
-  height: 100vh;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 16px;
-
+  background-image: url("../assets/Images/Wallpaper_Geral.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
-/* BOTÃO */
-button {
-  margin-top: 1rem;
-  align-self: center;
-  background: $gradiente-rosa;
-  color: $claro;
-  border: none;
-  padding: 0.7rem 1.4rem;
-  border-radius: 10px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: transform 0.2s ease, background 0.2s ease;
-  gap: 20px;
+// Criando a opacidade para a imagem de fundo
+.opacidade {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: $opacidade-fundo;
+  min-height: 100vh;
+  width: 100%;
 }
 
-button:hover {
-  background: $gradiente-rosa;
-  transform: scale(1.05);
-  gap: 30px;
+// Definindo a fonte dos títulos
+@font-face {
+  font-family: "Super Pixel";
+  src: url("../assets/Fonts/SuperPixel.ttf") format("truetype");
 }
 
-button:focus {
-  outline: 3px solid #4c0f32;
-  outline-offset: 3px;
-}
-
-button[disabled],
-.btn-disabled { 
-  color: #0e0404;
-  cursor: not-allowed;
-  opacity: 0.8;
-  background-color: #f3f1f2;
+// Definindo a fonte geral
+@font-face {
+  font-family: "Comic Sans MS";
+  src: url("../assets/Fonts/ComicSansMS.ttf") format("truetype");
 }

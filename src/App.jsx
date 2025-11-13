@@ -1,15 +1,15 @@
-
 import { BrowserRouter } from 'react-router-dom';
-import { Rotas } from './Rotas/Rotas'; 
-
+import { Rotas } from './Rotas/Rotas';
 
 function App() {
-  
   return (
-    <BrowserRouter>
-      <Rotas />
-    </BrowserRouter>
-  )
-
+    // Divisão criada para a imagem de fundo
+    <div className="opacidade">
+      <BrowserRouter>
+        <Rotas />
+      </BrowserRouter>
+    </div>
+  );
 }
-export default App
+
+export default App;

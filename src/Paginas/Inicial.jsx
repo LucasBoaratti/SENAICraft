@@ -1,16 +1,21 @@
-import logo from '../assets/logo.jpg';
-import { useNavigate } from 'react-router-dom';
+import { Cabecalho } from "../Componentes/Cabecalho";
+import { Outlet } from "react-router-dom";
+import { Menu } from "../Componentes/Menu";
 
 export function Inicial() {
-    const navigate =useNavigate();
-
   return (
-    <main className="inicial">
-      <img src={logo} className="logo" alt="Logo DS GO"  />
-     
-      <button onClick={() => navigate('/dsgo')} className='entrar'>
-        Entrar
-      </button>
-    </main>
+    <>
+      <div style={{ 
+        display: "flex", 
+        flexDirection: "column", 
+        minHeight: "100vh",
+      }}>
+        <Cabecalho/>
+        <div style={{ flex: "1" }}>
+          <Outlet/>
+        </div>
+        <Menu/>
+      </div>
+    </>
   );
 }

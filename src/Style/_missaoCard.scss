@@ -15,13 +15,13 @@
 
   /* scroll estilizado */
   scrollbar-width: thin;
-  scrollbar-color:$destaque-rosa;
+
   &::-webkit-scrollbar {
     width: 8px;
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: $destaque-rosa;
+
     border-radius: 10px;
   }
 
@@ -47,7 +47,7 @@
 
 /* CARD */
 .missao-card {
-  background-color:$card;
+
   color: #222;
   border-radius: 16px;
   overflow: hidden;

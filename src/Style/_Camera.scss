@@ -8,7 +8,7 @@
     max-width: 850px;
     margin: 2rem auto;
     text-align: center;
-    color: $claro;
+
     box-shadow: 0 0 25px rgba(247, 27, 228, 0.4);
     display: flex;
     flex-direction: column;
@@ -22,7 +22,7 @@
     .preview {
         width: 80%;
         aspect-ratio: 16 / 9;
-        background: $fundo;
+
         border-radius: 15px;
         overflow: hidden;
         margin-bottom: 1rem;

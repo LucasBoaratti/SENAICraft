@@ -1,18 +1,19 @@
 
 import { Routes, Route } from "react-router-dom";
 import { Inicial } from "../Paginas/Inicial";
-import { DSGo } from "../Paginas/DSGo";
+import { SENAICraft } from "../Paginas/SENAICraft";
 import { Missao} from "../Paginas/Missao";
 import { Inventario } from "../Paginas/Inventario";
 import { Galeria } from "../Paginas/Galeria";
+import { Introducao } from "../Paginas/Introducao";
 
 export function Rotas() {
     return (
         <Routes>
-            <Route path="/" element={<Inicial />} />
-            <Route path="/dsgo" element={<DSGo />} >  
-                <Route index element ={<DSGo/>}/>
-                <Route path="missao" element={<Missao />} /> 
+            <Route path="/" element={<Introducao />} />
+            <Route path="/SENAICraft" element={<Inicial/>}> 
+                <Route index element ={<SENAICraft/>} />
+                <Route path="missao" element={<Missao/>} />
                 <Route path="inventario" element={<Inventario/>} />
                 <Route path="camera" element={<Galeria/>} />
             </Route>

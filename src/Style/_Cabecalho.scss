@@ -1,0 +1,12 @@
+// Estilizando o cabeçalho
+.cabecalho {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 2.5rem;
+
+    .logo {
+        width: 17.5rem;
+        height: 8.125rem;
+    }
+}
