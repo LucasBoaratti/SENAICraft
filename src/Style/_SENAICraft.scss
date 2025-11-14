@@ -14,7 +14,7 @@
         left: 0;
 
         .balaoFala {
-            width: 44.375rem;
+            width: 47rem;
             height: 33.75rem;
             position: relative;
             top: -3.75rem;
@@ -22,13 +22,13 @@
         }
 
         .textoBoasVindas {
-            font-size: 1.125rem;
+            font-size: 20px;
             text-align: justify;
             width: 18.125rem;
             height: auto;
             position: absolute;
-            top: -5px;
-            left: 20.9375rem;
+            top: 0;
+            left: 22rem;
         }
     }
 }
@@ -45,22 +45,21 @@
             position: relative;
             top: 0;
             left: 0;
-            margin-bottom: 10px;
 
             .balaoFala {
-                width: 31.25rem;
-                height: 23.125rem;
+                width: 30rem;
+                height: 20rem;
                 position: relative;
-                top: -7.5rem;
+                top: -4.5rem;
                 display: block;
             }
 
             .textoBoasVindas {
-                font-size: 14px;
+                font-size: 13px;
                 position: absolute;
-                top: -4.6875rem;
-                left: 13.4375rem;
-                width: 15.625rem;
+                top: -2.1rem;
+                left: 14rem;
+                width: 13rem;
             }
         }
     }

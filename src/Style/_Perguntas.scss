@@ -1,0 +1,132 @@
+// ARQUIVO DE ESTILIZAÇAO DE PERGUNTAS.JSX E PERGUNTASCARD.JSX
+
+// Importando as variáveis globais
+@use './variaveis' as *;
+
+/* Estilizando o container principal (Perguntas.jsx) */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .containerPerguntas {
+    background-color: $bloco-diamante-opaco;
+    padding: 1.2rem 2rem;
+    border-radius: 1.25rem;
+    color: $cor-fonte-escura;
+    overflow-y: auto;
+    width: 75rem;
+    max-height: 35rem;
+    margin-bottom: 15px;
+    scrollbar-color: $bloco-diamante;
+
+    // Estilizando a cor da barra de rolagem
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      background-color: $bloco-diamante-opaco;
+    }
+
+    .tituloPerguntas {
+      font-family: $fonte-titulos;
+      font-size: 2.1875rem;
+      text-align: center;
+      margin-bottom: 1.25rem;
+    }
+
+    /* Estilizando o layout dos cards das perguntas */
+    .missoes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+
+      /* Estilizando os cards das perguntas */
+      .cardMissao {
+        color: $cor-fonte-clara;
+        border-radius: 1.25rem;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        padding: 1.5rem;
+        min-height: 13.75rem;
+        font-family: $fonte-geral;
+        font-size: 1.125rem;
+        background-color: $netherrack;
+      }
+
+      .cardMissao:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 12px rgba(0, 0, 0, 0.5);
+      }
+
+      .cardMissao h3 {
+        font-size: 1.25rem;
+        text-align: center;
+      }
+
+      .cardMissao p {
+        line-height: 1.5rem;
+        text-align: center;
+        font-size: 1.125rem;
+      }
+
+      .botaoIniciar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .botao {
+          background-color: $verde-limao;
+          border: none;
+          border-radius: 15px;
+          width: 12.5rem;
+          height: 1.875rem;
+          font-size: 1.125rem;
+          transition: background-color 0.2s ease-in;
+          cursor: pointer;
+        }
+
+        .botao:hover {
+          background-color: #FFE900;
+        }
+      }
+    }
+  }
+}
+
+// Responsividade para telas com 1440px de largura
+@media screen and (max-width: 1440px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .containerPerguntas {
+      background-color: $bloco-diamante-opaco;
+      padding: 1rem 2rem;
+      border-radius: 1.25rem;
+      color: $cor-fonte-escura;
+      overflow-y: auto;
+      width: 75rem;
+      max-height: 555px;
+      scrollbar-color: $bloco-diamante;
+
+      .tituloPerguntas {
+        font-family: $fonte-titulos;
+        font-size: 2.1875rem;
+        text-align: center;
+        margin-bottom: 1.25rem;
+      }
+    }
+  }
+}

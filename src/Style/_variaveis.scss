@@ -27,6 +27,14 @@ body {
   background-attachment: fixed;
 }
 
+// Adicionando a barra de rolagem
+@media screen and (max-width: 1440px) {
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+}
+
 // Criando a opacidade para a imagem de fundo
 .opacidade {
   position: fixed;
@@ -34,7 +42,7 @@ body {
   left: 0;
   z-index: -1;
   background: $opacidade-fundo;
-  min-height: 100vh;
+  height: 100vh;
   width: 100%;
 }
 

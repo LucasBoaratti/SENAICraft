@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { missoes } from '../Dados/dadosMissao';
 import { PerguntasCard } from '../Componentes/PerguntasCard';
-import { MissaoModal } from '../Componentes/MissaoModal';
+import { PerguntasModal } from '../Componentes/PerguntasModal';
 
 export function Perguntas() {
   const [missaoSelecionada, setMissaoSelecionada] = useState(null);
@@ -26,15 +26,14 @@ export function Perguntas() {
             />
           ))}
         </div>
-
-        {missaoSelecionada && (
-          <PerguntasCard 
-            missao={missaoSelecionada} 
-            onClose={() => setMissaoSelecionada(null)} 
-            onConcluir={() => concluirMissao(missaoSelecionada.id)} 
-          />
-        )}
       </section>
+      {missaoSelecionada && (
+        <PerguntasModal
+          missao={missaoSelecionada} 
+          onClose={() => setMissaoSelecionada(null)} 
+          onConcluir={() => concluirMissao(missaoSelecionada.id)} 
+        />
+      )}
     </main>
   );
 }

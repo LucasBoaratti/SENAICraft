@@ -3,12 +3,12 @@ import { Rotas } from './Rotas/Rotas';
 
 function App() {
   return (
-    // Divisão criada para a imagem de fundo
-    <div className="opacidade">
+    <>
+      <div className="opacidade" />
       <BrowserRouter>
         <Rotas />
       </BrowserRouter>
-    </div>
+    </>
   );
 }
 

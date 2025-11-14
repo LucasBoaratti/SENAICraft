@@ -10,3 +10,18 @@
         height: 8.125rem;
     }
 }
+
+// Responsividade para telas com 1440px de largura
+@media screen and (max-width: 1440px) {
+    .cabecalho {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        padding: 1.5rem 2rem;
+
+        .logo {
+            width: 11rem;
+            height: 5rem;
+        }
+    }
+}
