@@ -1,4 +1,3 @@
-
 import { Routes, Route } from "react-router-dom";
 import { Inicial } from "../Paginas/Inicial";
 import { SENAICraft } from "../Paginas/SENAICraft";

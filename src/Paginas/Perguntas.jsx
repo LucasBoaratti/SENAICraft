@@ -27,6 +27,7 @@ export function Perguntas() {
           ))}
         </div>
       </section>
+      {/* Renderizando o modal após clicar no botão */}
       {missaoSelecionada && (
         <PerguntasModal
           missao={missaoSelecionada} 
