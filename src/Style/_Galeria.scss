@@ -1,0 +1,68 @@
+// Importando as variáveis globais
+@use './variaveis' as *;
+
+// Estilizando as bordas da câmera e galeria de imagens
+.cameraGaleria {
+    background-color: $bloco-diamante-opaco;
+    border-radius: 25px;
+    max-width: 62.5rem;
+    margin: 0 auto;
+    height: auto;
+
+    // Estilizando a galeria
+    .containerGaleria {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        margin-bottom: 50px;
+
+        .tituloGaleria {
+            font-family: $fonte-titulos;
+            font-size: 35px;
+            margin-top: 20px;
+        }
+
+        .galeria {
+            width: 835px;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px;
+
+            .fotos {
+                border: 2px solid black;
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+                padding: 5px;
+
+                .foto {
+                    width: 260px;
+                    height: 200px;
+                    padding: 5px;
+                }
+            }
+        }
+
+        .botaoGaleria {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+
+            .limparGaleria {
+                width: 120px;
+                height: 30px;
+                font-size: 1rem;
+                border-radius: 15px;
+                border: none;
+                background-color: $netherrack;
+                color: $cor-fonte-clara;
+                cursor: pointer;
+            }
+        }
+    }
+}

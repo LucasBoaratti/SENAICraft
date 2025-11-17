@@ -1,41 +1,71 @@
+// Importando as variáveis globais
 @use './variaveis' as *;
  
+// Estilizando o container da câmera
 .camera-box {
-    background: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
     padding: 2rem;
-    max-width: 850px;
-    margin: 2rem auto;
+    max-width: 62.5rem;
+    margin: 0 auto;
     text-align: center;
-
-    box-shadow: 0 0 25px rgba(247, 27, 228, 0.4);
     display: flex;
     flex-direction: column;
  
-    h2 {
-        font-size: 1.6rem;
+    .tituloCamera {
+        font-size: 2.1875rem;
         margin-bottom: 1rem;
-    
+        font-family: $fonte-titulos;
     }
  
     .preview {
-        width: 80%;
-        aspect-ratio: 16 / 9;
-
+        width: 600px;
+        height: 350px;
         border-radius: 15px;
         overflow: hidden;
-        margin-bottom: 1rem;
+        padding-bottom: 2rem;
         display: flex;
         justify-content: center;
         align-items: center;
         margin: 0 auto;
-    
+        
         video, img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            border-radius: 12px;
+            border-radius: 15px;
+        }
+    }
+
+    .botoesFoto {
+        display: flex;
+        justify-content: center;
+            
+        .tirarFoto {
+            background-color: $netherrack;
+            width: 7.5rem;
+            height: 1.875rem;
+            font-size: 1rem;
+            color: white;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+
+        .fotoGaleria {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3.125rem;
+
+            .novaFoto, .mostrarGaleria {
+                width: 8.4375rem;
+                height: 1.875rem;
+                font-size: 1rem;
+                background-color: $netherrack;
+                border: none;
+                border-radius: 15px;
+                color: $cor-fonte-clara;
+                cursor: pointer;
+            }
         }
     }
 }

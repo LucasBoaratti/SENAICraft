@@ -1,7 +1,8 @@
 // Ref: é o hook que permite que eu interaja com os periféricos do usuários
 import { useState, useEffect, useRef } from "react";
+import { Galeria } from "../Paginas/Galeria";
 
-export function Camera({ onFotoTirada }) {
+export function Camera({ onFotoTirada, esconderGaleria, mostrarGaleria }) {
     const videoRef = useRef(null);
     const canvasRef = useRef(null);
     const [foto, setFoto] = useState(null);
@@ -11,7 +12,7 @@ export function Camera({ onFotoTirada }) {
         iniciarCamera();
     }, []);
 
-    const iniciarCamera = async () => {
+    async function iniciarCamera() {
         try {
             const stream = await navigator.mediaDevices.getUserMedia({
                 video: true,
@@ -26,7 +27,7 @@ export function Camera({ onFotoTirada }) {
         }
     }
 
-    const tirarFoto = () => {
+    function tirarFoto() {
         const video = videoRef.current;
         const canvas = canvasRef.current;
         const ctx = canvas.getContext("2d");
@@ -44,6 +45,11 @@ export function Camera({ onFotoTirada }) {
             // Permite a comunicação com as props
             onFotoTirada(imagem);
         }
+        
+        // Não exibe a galeria após tirar a foto
+        if (esconderGaleria) {
+            esconderGaleria();
+        }
     }
 
     function reiniciar() {
@@ -51,17 +57,10 @@ export function Camera({ onFotoTirada }) {
         iniciarCamera();
     }
 
-    function salvarFoto() {
-        const link = document.createElement("a");
-        link.href = foto;
-        link.download = "Foto.png";
-        link.click();
-    }
-
     return (
         <main>
             <section className="camera-box">
-                <h2>Captura de câmera</h2>
+                <h2 className="tituloCamera">Captura de imagem</h2>
                 <div className="preview">
                     {!foto ? (
                         <video ref={videoRef} autoPlay playsInline aria-label="Fluxo de câmera"/>
@@ -69,13 +68,13 @@ export function Camera({ onFotoTirada }) {
                         <img src={foto} alt="Foto capturada" />
                     )}
                 </div>
-                <div>
+                <div className="botoesFoto">
                     {!foto ? (
-                        <button type="button" onClick={tirarFoto}>Tirar foto</button>
+                        <button type="button" onClick={tirarFoto} className="tirarFoto">Tirar foto</button>
                     ) : (
-                        <div>
-                            <button type="button" onClick={reiniciar}>Nova foto</button>
-                            <button type="button" onClick={salvarFoto}>Salvar foto</button>
+                        <div className="fotoGaleria">
+                            <button type="button" onClick={reiniciar} className="novaFoto">Nova foto</button>
+                            <button type="button" onClick={mostrarGaleria} className="mostrarGaleria">Mostrar galeria</button>
                         </div>
                     )
                     }
