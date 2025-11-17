@@ -6,6 +6,7 @@ import Marcinha from "../assets/Images/Marcinha.webp";
 import Dorival from "../assets/Images/Dorival.jpg";
 import Modesto from "../assets/Images/Modesto.webp";
 import Lilica from "../assets/Images/Lilica.webp";
+import Mary from "../assets/Images/Mary.png";
 import Pedrinho from "../assets/Images/Pedrinho.webp";
 import Ari from "../assets/Images/Ari.jpg";
 import Duda from "../assets/Images/Duda.webp";
@@ -14,6 +15,14 @@ import Fer from "../assets/Images/Fer.png";
 import Lindomar from "../assets/Images/Lindomar.webp";
 import Israel from "../assets/Images/Israel.webp";
 import Gri from "../assets/Images/Gri.webp";
+import Gabriela from "../assets/Images/Gabriela.jpg";
+import Nico from "../assets/Images/Nico.webp";
+import Ge from "../assets/Images/Ge.webp";
+import Eve from "../assets/Images/Eve.webp";
+import Lucas from "../assets/Images/Lucas.jpg";
+import Tata from "../assets/Images/Tata.webp";
+import Adegas from "../assets/Images/Adegas.webp";
+import Vinicius from "../assets/Images/Vinicius.png";
 
 // Lista/dicionário com as imagens de sucesso de perguntas acertadas
 const imagensAcerto = {
@@ -23,7 +32,7 @@ const imagensAcerto = {
   4: Dorival,
   5: Modesto,
   6: Lilica,
-  // 7: Mariany,
+  7: Mary,
   8: Pedrinho,
   9: Ari,
   10: Duda,
@@ -32,6 +41,14 @@ const imagensAcerto = {
   13: Lindomar,
   14: Israel,
   15: Gri,
+  16: Gabriela,
+  17: Nico,
+  18: Ge,
+  19: Eve,
+  20: Lucas,
+  21: Tata,
+  22: Adegas,
+  23: Vinicius,
 }
 
 export function PerguntasModal({ missao, onClose, onConcluir }) {
@@ -52,10 +69,10 @@ export function PerguntasModal({ missao, onClose, onConcluir }) {
       setResultado("Resposta correta! Parabéns!");
       setStatus("sucesso");
 
-      // ✅ chama a função de concluir após 2s (tempo para mostrar feedback)
+      // ✅ chama a função de concluir após 2,5s (tempo para mostrar feedback)
       setTimeout(() => {
         onConcluir(missao.id);
-      }, 2000);
+      }, 2500);
     } else {
       setResultado("Resposta incorreta. Tente novamente!");
       setStatus("erro");
