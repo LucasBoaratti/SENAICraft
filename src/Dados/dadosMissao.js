@@ -157,15 +157,15 @@ export const missoes = [
     id: 20,
     titulo: "SENAICraft",
     missao: "Adivinhe o(a) aluno(a) ou o(a) professor(a)",   
-    descricao: "Qual é o meu personagem favorito de jogo? (Dica: minha foto do Whatsapp de novembro de 2025)",
-    respostaCorreta: "Ghost",
+    descricao: "Quem é a pessoa mais tímida da DS-15?",
+    respostaCorreta: "Lucas",
     status: 'disponivel'
   },
   {
     id: 21,
     titulo: "SENAICraft",
     missao: "Adivinhe o(a) aluno(a) ou o(a) professor(a)",   
-    descricao: "Quem é a pessoa mais tímida e carismática da DS-15?",
+    descricao: "Quem é a pessoa mais carismática da DS-15?",
     respostaCorreta: "Talita",
     status: 'disponivel'
   },
@@ -173,7 +173,7 @@ export const missoes = [
     id: 22,
     titulo: "SENAICraft",
     missao: "Adivinhe o(a) aluno(a) ou o(a) professor(a)",   
-    descricao: "Quem é o(a) mais dorminhoco(a) da DS-15? (Dica: tive que acordar ele no fretado, uma vez...)",
+    descricao: "Quem é o(a) mais dorminhoco(a) da DS-15? (Dica: tive que acordar ele(a) no fretado, uma vez...)",
     respostaCorreta: "Joao",
     status: 'disponivel'
   },

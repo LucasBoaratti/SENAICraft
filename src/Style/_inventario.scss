@@ -1,53 +1,72 @@
+// Importando as variáveis globais
 @use './variaveis' as *;
-.inventario {
-  padding: 2rem;
-  text-align: center;
-  color: #fff;
-  min-height: 100vh;
 
-  h2 {
-    margin-bottom: 1.5rem;
-    font-size: 2rem;
-  }
+// Estilizando o container do inventário
+.containerInventario {
+  display: flex;
+  justify-content: center;
+  background-color: $bloco-diamante-opaco;
+  max-width: 62.5rem;
+  height: 560px;
+  margin: 0 auto;
+  border-radius: 25px;
+  margin-bottom: 20px;
 
-  .vazio {
-    font-size: 1.2rem;
-    color: #ccc;
-  }
+  .inventario {
+    padding: 2rem;
+    text-align: center;
+    color: #fff;
 
-  /* Grid responsivo para exibir as figurinhas */
-  .grid {
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    justify-items: center;
-    margin-top: 15px;
-  }
-
-  .figurinha {
-
-    border-radius: 12px;
-    padding: 1rem;
-    box-shadow: 0 0 8px rgba(0,0,0,0.4);
-    transition: transform 0.2s;
-    width: 100%;
-    max-width: 150px;
-
-
-    &:hover {
-      transform: scale(1.05);
+    .tituloInventario {
+      font-size: 35px;
+      font-family: $fonte-titulos;
+      color: $cor-fonte-escura;
     }
 
-    img {
+    h2 {
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+    }
+
+    .vazio {
+      font-size: 1.2rem;
+      color: $cor-fonte-clara;
+    }
+
+    /* Grid responsivo para exibir as figurinhas */
+    .grid {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      justify-items: center;
+      margin-top: 15px;
+    }
+
+    .figurinha {
+
+      border-radius: 12px;
+      padding: 1rem;
+      box-shadow: 0 0 8px rgba(0,0,0,0.4);
+      transition: transform 0.2s;
       width: 100%;
-      max-width: 100px;
-      margin-bottom: 0.5rem;
-    }
+      max-width: 150px;
 
-    p {
-      margin: 0;
-      font-weight: bold;
-      font-size: 1rem;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+
+      img {
+        width: 100%;
+        max-width: 100px;
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        margin: 0;
+        font-weight: bold;
+        font-size: 1rem;
+      }
     }
   }
 }
