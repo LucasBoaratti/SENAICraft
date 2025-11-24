@@ -15,7 +15,7 @@
     border-radius: 1.25rem;
     color: $cor-fonte-escura;
     overflow-y: auto;
-    width: 75rem;
+    width: 68.75rem;
     max-height: 35rem;
     margin-bottom: 15px;
     scrollbar-color: $bloco-diamante;
@@ -35,17 +35,38 @@
     }
 
     .tituloPerguntas {
-      font-family: $fonte-titulos;
-      font-size: 2.1875rem;
+      font-size: 1.125rem;
       text-align: center;
       margin-bottom: 1.25rem;
     }
 
     /* Estilizando o layout dos cards das perguntas */
     .missoes-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .mapa {
+        position: relative;
+        display: inline-block;
+
+        .mapaPerguntas {
+          display: block;
+          width: 100%;
+        }
+
+        .bannerPerguntas {
+          position: absolute;
+          cursor: pointer;
+          z-index: 2;
+          transform: translate(-50%, -50%);
+        }
+
+        .bannerPerguntas.perguntaRespondida {
+          cursor: default;
+        }
+      }
 
       /* Estilizando os cards das perguntas */
       .cardMissao {

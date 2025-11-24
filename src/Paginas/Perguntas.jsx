@@ -2,6 +2,7 @@ import { useState } from "react";
 import { missoes } from '../Dados/dadosMissao';
 import { PerguntasCard } from '../Componentes/PerguntasCard';
 import { PerguntasModal } from '../Componentes/PerguntasModal';
+import MapaPerguntas from "../assets/Images/Mapa_Perguntas.png";
 
 export function Perguntas() {
   const [missaoSelecionada, setMissaoSelecionada] = useState(null);
@@ -15,16 +16,20 @@ export function Perguntas() {
   return (
     <main className="container">
       <section className='containerPerguntas'>
-        <h2 className="tituloPerguntas">Perguntas</h2>
+        <p className="tituloPerguntas">Esse aqui é o mapa das perguntas. Clique em qualquer banner para responder uma pergunta. E que a sorte esteja sempre com você!</p>
+        <p className="tituloPerguntas">Legenda: vermelho - não respondido ; magenta - respondido</p>
         <div className="missoes-grid">
-          {missoes.map((m) => (
-            <PerguntasCard
-              key={m.id} 
-              missao={m}
-              onIniciarMissao={setMissaoSelecionada} 
-              concluida={missoesConcluidas.includes(m.id)} 
-            />
-          ))}
+          <div className="mapa">
+            <img src={MapaPerguntas} alt="Mapa de perguntas." className="mapaPerguntas" />
+            {missoes.map((m) => (
+              <PerguntasCard
+                key={m.id} 
+                missao={m}
+                onIniciarMissao={setMissaoSelecionada} 
+                concluida={missoesConcluidas.includes(m.id)} 
+              />
+            ))}
+          </div>
         </div>
       </section>
       {/* Renderizando o modal após clicar no botão */}
