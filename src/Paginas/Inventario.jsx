@@ -5,11 +5,11 @@ export function Inventario() {
 
   useEffect(() => {
     // Carrega o inventário salvo no localStorage ao abrir a página
-    //const armazenado = JSON.parse(localStorage.getItem("inventario")) || [];
-    //setFigurinhas(armazenado);
+    const armazenado = JSON.parse(localStorage.getItem("inventario")) || [];
+    setFigurinhas(armazenado);
   }, []);
 
-    const limparInventario = () => {
+  function limparInventario() {
     // pede confirmação ao usuário
     if (!window.confirm("Deseja realmente limpar o inventário?")) return;
 
@@ -18,7 +18,7 @@ export function Inventario() {
 
     // atualiza o estado local para refletir a limpeza na UI
     setFigurinhas([]);
-  };
+  }
 
 
   return (
@@ -32,12 +32,14 @@ export function Inventario() {
           <div className="grid">
             {figurinhas.map((f) => (
               <div key={f.id} className="figurinha">
-                <img src={f.imagem} alt={f.nome} />
-                <button className="limpar-inventario" onClick={limparInventario}>
-                  Limpar Inventário
-                </button>
+                <img src={f.imagem} alt={f.respostaCorreta} />
               </div>
             ))}
+            <div className="limparInventario">
+              <button className="botaoLimparInventario" onClick={limparInventario}>
+                Limpar Inventário
+              </button>
+            </div>
           </div>
         )}
       </section>

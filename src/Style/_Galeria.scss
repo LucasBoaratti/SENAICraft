@@ -15,7 +15,6 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 5px;
         margin-bottom: 50px;
 
         .tituloGaleria {
@@ -34,15 +33,30 @@
             margin-top: 40px;
 
             .fotos {
-                border: 2px solid black;
                 display: grid;
                 grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-                padding: 5px;
 
-                .foto {
-                    width: 260px;
-                    height: 200px;
-                    padding: 5px;
+                .inventarioFoto {
+                    position: relative;
+
+                    .inventario {
+                        width: 310px;
+                        height: 250px;
+                    }
+
+                    .fotosTiradas {
+                        position: absolute;
+                        top: 9%;
+                        left: 7%;
+                        border-radius: 20px;
+
+                        .foto {
+                            width: 260px;
+                            height: 200px;
+                            box-shadow: 0 4px 10px rgb(255, 255, 255);
+                            border-radius: 20px;
+                        }
+                    }
                 }
             }
         }

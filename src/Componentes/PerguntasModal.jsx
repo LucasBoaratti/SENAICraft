@@ -49,6 +49,33 @@ const imagensAcerto = {
   21: Tata,
   22: Adegas,
   23: Vinicius,
+  24: Vinicius,
+  25: Modesto,
+  // 26: Agatha,
+  27: Lindomar,
+  // 28: Francis,
+  // 29: Cleber,
+  // 30: Vanessa,
+  31: Fer,
+  32: Gri,
+  33: Lucas,
+  34: Jokita,
+  // 35: Vitoria,
+  // 36: Plinio,
+  // 37: Fuzari,
+  // 38: Luca,
+  // 39: Willson,
+  40: Eve,
+  // 41: Leonardo,
+  // 42: Giovanna,
+  43: Gabriela,
+  44: Thifs,
+  // 45: Francis,
+  46: Pedrinho,
+  47: Duda,
+  48: Gri,
+  49: Nico,
+  50: Lucas,
 }
 
 export function PerguntasModal({ missao, onClose, onConcluir }) {
@@ -68,6 +95,19 @@ export function PerguntasModal({ missao, onClose, onConcluir }) {
     ) {
       setResultado("Resposta correta! Parabéns!");
       setStatus("sucesso");
+      
+      // Buscando as imagens para exibir no inventário
+      const inventarioImagens = JSON.parse(localStorage.getItem("inventario")) || [];
+
+      // Adicionando a imagem no localStorage
+      inventarioImagens.push({
+        id: missao.id,
+        nome: missao.respostaCorreta,
+        imagem: missao.imagem,
+      });
+
+      // Salvando como array
+      localStorage.setItem("inventario", JSON.stringify(inventarioImagens));
 
       // ✅ chama a função de concluir após 2,5s (tempo para mostrar feedback)
       setTimeout(() => {
@@ -77,7 +117,7 @@ export function PerguntasModal({ missao, onClose, onConcluir }) {
       setResultado("Resposta incorreta. Tente novamente!");
       setStatus("erro");
     }
-  };
+  }
 
   return (
     <section className="containerModal" onClick={onClose}>

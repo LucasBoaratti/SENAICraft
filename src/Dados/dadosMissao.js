@@ -7,6 +7,7 @@ export const missoes = [
     status: 'disponivel',
     x: 100,
     y: 50,
+    imagem: "assets/Images/Thifs.png",
   },
   {
     id: 2,
@@ -310,8 +311,8 @@ export const missoes = [
   {
     id: 35,
     titulo: "SENAICraft",
-    descricao: "'Oii, oii!' qual é o(a) instrutor(a) ou meio-oficial que faz essa saudação?",
-    respostaCorreta: "Giovanna",
+    descricao: "'Oii, pessoas!' qual é o Instrutor(a) ou meio-oficial que faz essa saudação?",
+    respostaCorreta: "Vitoria",
     status: 'disponivel',
     x: 720,
     y: 200,

@@ -1,6 +1,7 @@
 import { Camera } from "../Componentes/Camera";
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
+import QuadradoInventario from "../assets/Images/Quadrado_Inventário.png";
 import { useState } from "react";
 
 export function Galeria() {
@@ -34,21 +35,24 @@ export function Galeria() {
     return (
         <main className={`cameraGaleria ${galeria ? "bordaInferior" : ""}`}>
             {/* Renderiza a câmeria e depois a galeria, após o usuário clicar no botão de mostrar a galeria */}
-            <Camera onFotoTirada={adicionarFoto} esconderGaleria={() => setGaleria(false)} mostrarGaleria={mostrarGaleria}/>
+            <Camera onFotoTirada={adicionarFoto} esconderGaleria={() => setGaleria(false)} mostrarGaleria={mostrarGaleria} />
             {galeria && (
                 <section className="containerGaleria">
                     <h2 className="tituloGaleria">Galeria de imagens</h2>
                     <section className="galeria">
                         <ImageList className="fotos" cols={3}>
                             {fotos.map((foto, index) => (
-                                <ImageListItem key={index}>
-                                    <img
-                                        src={foto}
-                                        alt={`Foto ${index + 1}`}
-                                        loading="lazy"
-                                        className="foto"
-                                    />
-                                </ImageListItem>
+                                <div key={index} className="inventarioFoto">
+                                    <img src={QuadradoInventario} alt="Inventário do Minecraft." className="inventario" />
+                                    <ImageListItem className="fotosTiradas">
+                                        <img
+                                            src={foto}
+                                            alt={`Foto ${index + 1}`}
+                                            loading="lazy"
+                                            className="foto"
+                                        />
+                                    </ImageListItem>
+                                </div>
                             ))}
                         </ImageList>
                     </section>
