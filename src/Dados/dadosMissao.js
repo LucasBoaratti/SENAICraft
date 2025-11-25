@@ -427,8 +427,8 @@ export const missoes = [
   {
     id: 48,
     titulo: "SENAICraft",
-    descricao: "Quem é o menino mais baixo da DS-15? Dica: em altura.",
-    respostaCorreta: "Joao",
+    descricao: "Quem é o(a) maior fã do bar do Tom Zé?",
+    respostaCorreta: "Yngrid",
     status: 'disponivel',
     x: 820,
     y: 70,
