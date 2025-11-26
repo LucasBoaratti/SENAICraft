@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { missoes } from '../Dados/dadosMissao';
 import { PerguntasCard } from '../Componentes/PerguntasCard';
 import { PerguntasModal } from '../Componentes/PerguntasModal';
@@ -7,11 +7,27 @@ import MapaPerguntas from "../assets/Images/Mapa_Perguntas.png";
 export function Perguntas() {
   const [missaoSelecionada, setMissaoSelecionada] = useState(null);
   const [missoesConcluidas, setMissoesConcluidas] = useState([]);
+  const [inventario, setInventario] = useState([]); // Estado que controla se o inventário está limpo ou não
 
   function concluirMissao(id) {
     setMissoesConcluidas((prev) => [...prev, id]); // adiciona id no array
     setMissaoSelecionada(null); // fecha modal
+
+    // Recarregando o inventário após atualizar
+    const armazenado = JSON.parse(localStorage.getItem("inventario")) || [];
+    setInventario(armazenado);
   };
+
+  // Função que verifica se uma missão foi respondida
+  function perguntaConcluida(idMissao) {
+    return inventario.some((item) => item.id === idMissao);
+  }
+
+  // Carregando o inventário salvo no localstorage
+  useEffect(() => {
+    const armazenado = JSON.parse(localStorage.getItem("inventario")) || [];
+    setInventario(armazenado);
+  }, []);
 
   return (
     <main className="container">
@@ -26,7 +42,7 @@ export function Perguntas() {
                 key={m.id} 
                 missao={m}
                 onIniciarMissao={setMissaoSelecionada} 
-                concluida={missoesConcluidas.includes(m.id)} 
+                concluida={perguntaConcluida(m.id)} 
               />
             ))}
           </div>

@@ -1,5 +1,5 @@
 // Importando as variáveis globais
-@use './variaveis' as *;
+@use "./variaveis" as *;
 
 // Estilizando o container do inventário
 .containerInventario {
@@ -7,10 +7,27 @@
   justify-content: center;
   background-color: $bloco-diamante-opaco;
   max-width: 62.5rem;
-  height: 35rem;
+  max-height: 570px;
+  height: auto;
   margin: 0 auto;
+  overflow-y: auto;
+  overflow-x: hidden;
   border-radius: 1.5625rem;
   margin-bottom: 1.25rem;
+
+  // Estilizando a cor da barra de rolagem
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: $bloco-diamante-opaco;
+  }
 
   .inventario {
     padding: 1.5rem;
@@ -28,54 +45,66 @@
       color: $cor-fonte-clara;
     }
 
-    /* Grid responsivo para exibir as figurinhas */
-    .grid {
-      display: grid;
-      gap: 1rem;
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-      justify-items: center;
-      margin-top: 15px;
+    .figurinhas {
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-      .figurinha {
-        border-radius: 15px;
-        padding: 1rem;
-        box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.25);
-        transition: transform 0.2s;
-        width: 100%;
-        max-width: 9.375rem;
+      /* Grid responsivo para exibir as figurinhas */
+      .grid {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: center;
+        margin-top: 15px;
 
-        &:hover {
-          transform: scale(1.05);
-        }
-
-        img {
+        .figurinha {
+          border-radius: 15px;
+          padding: 1rem;
+          transition: transform 0.2s;
           width: 100%;
-          max-width: 6.25rem;
-          margin-bottom: 0.5rem;
-        }
 
-        p {
-          margin: 0;
-          font-weight: bold;
-          font-size: 1rem;
+          .imagemFigurinha {
+            width: 12.5rem;
+            height: 17.1875rem;
+            box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 1.25rem;
+          }
+
+          &:hover {
+            transform: scale(1.05);
+          }
+
+          p {
+            margin: 0;
+            font-weight: bold;
+            font-size: 1rem;
+          }
         }
       }
+    }
 
-      .limparInventario {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .limparInventario {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 2.5rem 0;
 
-        .botaoLimparInventario {
-          background-color: $netherrack;
-          font-size: 1.125rem;
-          width: 8.4375rem;
-          height: 1.875rem;
-          color: $cor-fonte-clara;
-          border: none;
-          border-radius: 15px;
-          cursor: pointer;
-        }
+      .botaoLimparInventario {
+        background-color: $netherrack;
+        font-size: 1.125rem;
+        width: 11.875rem;
+        height: 1.875rem;
+        color: $cor-fonte-clara;
+        border: none;
+        border-radius: 15px;
+        transition: background-color 0.2s ease-in;
+        cursor: pointer;
+      }
+
+      .botaoLimparInventario:hover {
+        background-color: #0709FF;
+        transition: background-color 0.2s ease-in;
       }
     }
   }

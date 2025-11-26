@@ -69,6 +69,12 @@
       color: $cor-fonte-clara;
     }
 
+    .erro {
+      color: black;
+      font-size: 15px;
+      text-align: center;
+    }
+
     .modal-botoes {
       display: flex;
       justify-content: center;

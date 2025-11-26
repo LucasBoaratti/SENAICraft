@@ -20,28 +20,31 @@ export function Inventario() {
     setFigurinhas([]);
   }
 
-
   return (
     <main className="containerInventario">
       <section className="inventario">
         <h2 className="tituloInventario">Inventário</h2>
         {/* Caso o jogador ainda não tenha nenhuma figurinha */}
-        {figurinhas.length === 0 ? (
-          <p className="vazio">Você ainda não possui uma figurinha... Acerte mais perguntas para desbloquear.</p>
-        ) : (
-          <div className="grid">
-            {figurinhas.map((f) => (
-              <div key={f.id} className="figurinha">
-                <img src={f.imagem} alt={f.respostaCorreta} />
+        <div className="figurinhas">
+          {figurinhas.length === 0 ? (
+            <p className="vazio">Você ainda não possui uma figurinha... Acerte mais perguntas para desbloquear.</p>
+          ) : (
+            <div>
+              <div className="grid">
+                {figurinhas.map((f) => (
+                  <div key={f.id} className="figurinha">
+                    <img src={`/${f.imagem}`} alt={f.respostaCorreta} className="imagemFigurinha" />
+                  </div>
+                ))}
               </div>
-            ))}
-            <div className="limparInventario">
-              <button className="botaoLimparInventario" onClick={limparInventario}>
-                Limpar Inventário
-              </button>
+              <div className="limparInventario">
+                <button className="botaoLimparInventario" onClick={limparInventario}>
+                  Limpar Inventário
+                </button>
+              </div>
             </div>
-          </div>
-        )}
+          )}
+        </div>
       </section>
     </main>
   );

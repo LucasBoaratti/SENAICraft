@@ -7,7 +7,7 @@ export const missoes = [
     status: 'disponivel',
     x: 100,
     y: 50,
-    imagem: "assets/Images/Thifs.png",
+    imagem: "public/Images/Thifs.png",
   },
   {
     id: 2,
@@ -17,6 +17,7 @@ export const missoes = [
     status: 'disponivel',
     x: 300,
     y: 140,
+    imagem: "public/Images/Vini.png",
   },
   {
     id: 3,
@@ -26,6 +27,7 @@ export const missoes = [
     status: 'disponivel',
     x: 40,
     y: 350,
+    imagem: "public/Images/Marcia.png",
   },
   {
     id: 4,
@@ -35,6 +37,7 @@ export const missoes = [
     status: 'disponivel',
     x: 90,
     y: 250,
+    imagem: "public/Images/Dori.png",
   },
   {
     id: 5,
@@ -44,6 +47,7 @@ export const missoes = [
     status: 'disponivel',
     x: 400,
     y: 200,
+    imagem: "public/Images/michel.png",
   }
   ,
   {
@@ -54,6 +58,7 @@ export const missoes = [
     status: 'disponivel',
     x: 200,
     y: 470,
+    imagem: "public/Images/Lívia.png",
   },
   {
     id: 7,
@@ -63,6 +68,7 @@ export const missoes = [
     status: 'disponivel',
     x: 230,
     y: 300,
+    imagem: "public/Images/maryAvatar.png",
   }
   ,
   {
@@ -73,6 +79,7 @@ export const missoes = [
     status: 'disponivel',
     x: 170,
     y: 160,
+    imagem: "public/Images/Pedro.png",
   },
   {
     id: 9,
@@ -82,6 +89,7 @@ export const missoes = [
     status: 'disponivel',
     x: 120,
     y: 410,
+    imagem: "public/Images/Ariane.png",
   },
   {
     id: 10,
@@ -91,6 +99,7 @@ export const missoes = [
     status: 'disponivel',
     x: 270,
     y: 30,
+    imagem: "public/Images/Maria_Eduarda.png",
   },
   {
     id: 11,
@@ -100,6 +109,7 @@ export const missoes = [
     status: 'disponivel',
     x: 380,
     y: 70,
+    imagem: "public/Images/Joyce.png",
   },
   {
     id: 12,
@@ -109,6 +119,7 @@ export const missoes = [
     status: 'disponivel',
     x: 500,
     y: 50,
+    imagem: "public/Images/ferAvatar.png",
   },
   {
     id: 13,
@@ -118,6 +129,7 @@ export const missoes = [
     status: 'disponivel',
     x: 450,
     y: 130,
+    imagem: "public/Images/BeautifulSea.png",
   },
   {
     id: 14,
@@ -127,6 +139,7 @@ export const missoes = [
     status: 'disponivel',
     x: 310,
     y: 260,
+    imagem: "public/Images/ProfIsrael.png",
   },
   {
     id: 15,
@@ -136,6 +149,7 @@ export const missoes = [
     status: 'disponivel',
     x: 290,
     y: 350,
+    imagem: "public/Images/Yngrid.png",
   },
   {
     id: 16,
@@ -145,6 +159,7 @@ export const missoes = [
     status: 'disponivel',
     x: 310,
     y: 480,
+    imagem: "public/Images/Gabs.png",
   },
   {
     id: 17,
@@ -154,6 +169,7 @@ export const missoes = [
     status: 'disponivel',
     x: 600,
     y: 30,
+    imagem: "public/Images/Nicolas.png",
   },
   {
     id: 18,
@@ -163,6 +179,7 @@ export const missoes = [
     status: 'disponivel',
     x: 400,
     y: 330,
+    imagem: "public/Images/Geovanna.png",
   },
   {
     id: 19,
@@ -172,6 +189,7 @@ export const missoes = [
     status: 'disponivel',
     x: 380,
     y: 430,
+    imagem: "public/Images/Evellyn.png",
   },
   {
     id: 20,
@@ -181,6 +199,7 @@ export const missoes = [
     status: 'disponivel',
     x: 540,
     y: 110,
+    imagem: "public/Images/Lucas_Ghost.png",
   },
   {
     id: 21,
@@ -190,6 +209,7 @@ export const missoes = [
     status: 'disponivel',
     x: 460,
     y: 270,
+    imagem: "public/Images/Talita.png",
   },
   {
     id: 22,
@@ -199,6 +219,7 @@ export const missoes = [
     status: 'disponivel',
     x: 160,
     y: 330,
+    imagem: "public/Images/João.png",
   },
   {
     id: 23,
@@ -208,6 +229,7 @@ export const missoes = [
     status: 'disponivel',
     x: 510,
     y: 220,
+    imagem: "public/Images/ProfVinicius.png",
   },
   {
     id: 24,
@@ -217,6 +239,7 @@ export const missoes = [
     status: 'disponivel',
     x: 610,
     y: 180,
+    imagem: "public/Images/ProfVinicius.png", // Gerar nova imagem
   },
   {
     id: 25,
@@ -226,6 +249,7 @@ export const missoes = [
     status: 'disponivel',
     x: 570,
     y: 260,
+    imagem: "public/Images/ProfVinicius.png", // Gerar nova imagem
   },
   {
     id: 26,
@@ -235,6 +259,7 @@ export const missoes = [
     status: 'disponivel',
     x: 520,
     y: 330,
+    imagem: "public/Images/ProfVinicius.png", // Gerar nova imagem
   },
   {
     id: 27,
@@ -244,6 +269,7 @@ export const missoes = [
     status: 'disponivel',
     x: 470,
     y: 390,
+    imagem: "public/Images/ProfVinicius.png", // Gerar nova imagem
   },
   {
     id: 28,
@@ -253,6 +279,7 @@ export const missoes = [
     status: 'disponivel',
     x: 440,
     y: 490,
+    imagem: "public/Images/ProfVinicius.png", // Gerar nova imagem
   },
   {
     id: 29,
@@ -262,6 +289,7 @@ export const missoes = [
     status: 'disponivel',
     x: 560,
     y: 400,
+    imagem: "public/Images/ProfVinicius.png", // Gerar nova imagem
   },
   {
     id: 30,
@@ -271,6 +299,7 @@ export const missoes = [
     status: 'disponivel',
     x: 520,
     y: 460,
+    imagem: "public/Images/ProfVinicius.png", // Gerar nova imagem
   },
   {
     id: 31,
@@ -280,6 +309,7 @@ export const missoes = [
     status: 'disponivel',
     x: 670,
     y: 60,
+    imagem: "public/Images/ProfVinicius.png", // Gerar nova imagem
   },
   {
     id: 32,
@@ -289,6 +319,7 @@ export const missoes = [
     status: 'disponivel',
     x: 520,
     y: 460,
+    imagem: "public/Images/ProfVinicius.png", // Gerar nova imagem
   },
   {
     id: 33,
@@ -298,6 +329,7 @@ export const missoes = [
     status: 'disponivel',
     x: 630,
     y: 490,
+    imagem: "public/Images/ProfVinicius.png", // Gerar nova imagem
   },
   {
     id: 34,
@@ -307,6 +339,7 @@ export const missoes = [
     status: 'disponivel',
     x: 670,
     y: 140,
+    imagem: "public/Images/ProfVinicius.png", // Gerar nova imagem
   },
   {
     id: 35,
@@ -316,6 +349,7 @@ export const missoes = [
     status: 'disponivel',
     x: 720,
     y: 200,
+    imagem: "public/Images/ProfVinicius.png", // Gerar nova imagem
   },
   {
     id: 36,
@@ -325,6 +359,7 @@ export const missoes = [
     status: 'disponivel',
     x: 610,
     y: 320,
+    imagem: "public/Images/ProfVinicius.png", // Gerar nova imagem
   },
   {
     id: 37,
@@ -334,6 +369,7 @@ export const missoes = [
     status: 'disponivel',
     x: 650,
     y: 400,
+    imagem: "public/Images/ProfVinicius.png", // Gerar nova imagem
   },
   {
     id: 38,
@@ -343,6 +379,7 @@ export const missoes = [
     status: 'disponivel',
     x: 670,
     y: 260,
+    imagem: "public/Images/ProfVinicius.png", // Gerar nova imagem
   },
   {
     id: 39,
@@ -352,6 +389,7 @@ export const missoes = [
     status: 'disponivel',
     x: 730,
     y: 340,
+    imagem: "public/Images/ProfVinicius.png", // Gerar nova imagem
   },
   {
     id: 40,
@@ -361,6 +399,7 @@ export const missoes = [
     status: 'disponivel',
     x: 770,
     y: 420,
+    imagem: "public/Images/ProfVinicius.png", // Gerar nova imagem
   },
   {
     id: 41,
@@ -370,6 +409,7 @@ export const missoes = [
     status: 'disponivel',
     x: 710,
     y: 470,
+    imagem: "public/Images/ProfVinicius.png", // Gerar nova imagem
   },
   {
     id: 42,
@@ -379,6 +419,7 @@ export const missoes = [
     status: 'disponivel',
     x: 805,
     y: 280,
+    imagem: "public/Images/ProfVinicius.png", // Gerar nova imagem
   },
   {
     id: 43,
@@ -388,6 +429,7 @@ export const missoes = [
     status: 'disponivel',
     x: 840,
     y: 340,
+    imagem: "public/Images/ProfVinicius.png", // Gerar nova imagem
   },
   {
     id: 44,
@@ -397,6 +439,7 @@ export const missoes = [
     status: 'disponivel',
     x: 840,
     y: 440,
+    imagem: "public/Images/ProfVinicius.png", // Gerar nova imagem
   },
   {
     id: 45,
@@ -406,6 +449,7 @@ export const missoes = [
     status: 'disponivel',
     x: 900,
     y: 280,
+    imagem: "public/Images/ProfVinicius.png", // Gerar nova imagem
   },
   {
     id: 46,
@@ -415,6 +459,7 @@ export const missoes = [
     status: 'disponivel',
     x: 830,
     y: 170,
+    imagem: "public/Images/ProfVinicius.png", // Gerar nova imagem
   },
   {
     id: 47,
@@ -424,6 +469,7 @@ export const missoes = [
     status: 'disponivel',
     x: 750,
     y: 120,
+    imagem: "public/Images/ProfVinicius.png", // Gerar nova imagem
   },
   {
     id: 48,
@@ -433,6 +479,7 @@ export const missoes = [
     status: 'disponivel',
     x: 820,
     y: 70,
+    imagem: "public/Images/ProfVinicius.png", // Gerar nova imagem
   },
   {
     id: 49,
@@ -442,6 +489,7 @@ export const missoes = [
     status: 'disponivel',
     x: 50,
     y: 130,
+    imagem: "public/Images/ProfVinicius.png", // Gerar nova imagem
   },
   {
     id: 50,
@@ -451,5 +499,6 @@ export const missoes = [
     status: 'disponivel',
     x: 220,
     y: 230,
+    imagem: "public/Images/ProfVinicius.png", // Gerar nova imagem
   },
 ];

@@ -1,4 +1,7 @@
 import { useState } from "react";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
 import Ghost from "../assets/Images/GhostTriste.jpg";
 import Thifs from "../assets/Images/Thifszeira.webp";
 import Vinicinho from "../assets/Images/Vinicinho.webp";
@@ -23,6 +26,18 @@ import Lucas from "../assets/Images/Lucas.jpg";
 import Tata from "../assets/Images/Tata.webp";
 import Adegas from "../assets/Images/Adegas.webp";
 import Vinicius from "../assets/Images/Vinicius.png";
+
+// Schema de validação com o Zod
+const schemaResposta = z.object({
+  // Regex que verifica se a resposta contém apenas letras maiúsculas ou minúsculas
+  resposta: z.string()
+    .min(1, "Por favor, digite uma resposta.")
+    .max(15, "A resposta não pode passar de 15 caracteres.")
+    .regex(
+      /^[A-Za-z]+$/, {
+        message: "Por favor, digite até 15 caracteres, sendo maiúsculos e minúsculos.",
+    }),
+});
 
 // Lista/dicionário com as imagens de sucesso de perguntas acertadas
 const imagensAcerto = {
@@ -79,16 +94,21 @@ const imagensAcerto = {
 }
 
 export function PerguntasModal({ missao, onClose, onConcluir }) {
-  const [resposta, setResposta] = useState("");
   const [resultado, setResultado] = useState(null);
   const [status, setStatus] = useState(null);
 
-  function verificarResposta() {
-    if (!resposta.trim()) {
-      alert("Por favor, digite uma resposta antes de enviar!");
-      return;
-    }
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: zodResolver(schemaResposta),
+  });
 
+  function verificarResposta(data) {
+    const resposta = data.resposta;
+
+    // Verificando se a resposta está correta
     if (
       resposta.trim().toLowerCase() ===
       missao.respostaCorreta.trim().toLowerCase()
@@ -114,7 +134,6 @@ export function PerguntasModal({ missao, onClose, onConcluir }) {
         onConcluir(missao.id);
       }, 2500);
     } else {
-      setResultado("Resposta incorreta. Tente novamente!");
       setStatus("erro");
     }
   }
@@ -126,25 +145,24 @@ export function PerguntasModal({ missao, onClose, onConcluir }) {
           {missao.titulo}
         </h2>
         <p id="descricao-missao" className="descricaoPergunta">{missao.descricao}</p>
-
-        <label htmlFor="resposta" className="labelPergunta">
-          Sua resposta:
-        </label>
-        <input
-          className="caixaTexto"
-          id="resposta"
-          type="text"
-          placeholder="Digite sua resposta..."
-          value={resposta}
-          onChange={(e) => setResposta(e.target.value)}
-          required
-        />
-
-        <div className="modal-botoes">
-          <button onClick={verificarResposta} className="botao">Enviar</button>
-          <button onClick={onClose} className="botao">Fechar</button>
-        </div>
-
+        <form onSubmit={handleSubmit(verificarResposta)}>
+          <label htmlFor="resposta" className="labelPergunta">
+            Sua resposta:
+          </label>
+          <input
+            className="caixaTexto"
+            id="resposta"
+            type="text"
+            placeholder="Digite sua resposta..."
+            {...register("resposta")}
+          />
+          {/* Exibindo o erro caso o usuário faça algo errado */}
+          {errors.resposta && <p className="erro">{errors.resposta.message}</p>}
+          <div className="modal-botoes">
+            <button type="submit" className="botao">Enviar</button>
+            <button type="button" onClick={onClose} className="botao">Fechar</button>
+          </div>
+        </form>
         {resultado && (
           <div className="resultado">
             <p>{resultado}</p>
