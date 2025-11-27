@@ -249,7 +249,7 @@ export const missoes = [
     status: 'disponivel',
     x: 570,
     y: 260,
-    imagem: "public/Images/ProfVinicius.png", // Gerar nova imagem
+    imagem: "public/Images/michel.png", // Gerar nova imagem
   },
   {
     id: 26,
@@ -259,7 +259,7 @@ export const missoes = [
     status: 'disponivel',
     x: 520,
     y: 330,
-    imagem: "public/Images/ProfVinicius.png", // Gerar nova imagem
+    imagem: "public/Images/Agatha.png",
   },
   {
     id: 27,
@@ -269,7 +269,7 @@ export const missoes = [
     status: 'disponivel',
     x: 470,
     y: 390,
-    imagem: "public/Images/ProfVinicius.png", // Gerar nova imagem
+    imagem: "public/Images/BeautifulSea.png", // Gerar nova imagem
   },
   {
     id: 28,
@@ -279,17 +279,17 @@ export const missoes = [
     status: 'disponivel',
     x: 440,
     y: 490,
-    imagem: "public/Images/ProfVinicius.png", // Gerar nova imagem
+    imagem: "public/Images/Francis.png",
   },
   {
     id: 29,
     titulo: "SENAICraft",
     descricao: "Quem é o(a) instrutor(a) ou meio-oficial mais descolado(a) do DTA?",
-    respostaCorreta: "Cléber",
+    respostaCorreta: "Cleber",
     status: 'disponivel',
     x: 560,
     y: 400,
-    imagem: "public/Images/ProfVinicius.png", // Gerar nova imagem
+    imagem: "public/Images/Cleber.png", 
   },
   {
     id: 30,
@@ -299,7 +299,7 @@ export const missoes = [
     status: 'disponivel',
     x: 520,
     y: 460,
-    imagem: "public/Images/ProfVinicius.png", // Gerar nova imagem
+    imagem: "public/Images/Vanessa.png", 
   },
   {
     id: 31,
@@ -309,7 +309,7 @@ export const missoes = [
     status: 'disponivel',
     x: 670,
     y: 60,
-    imagem: "public/Images/ProfVinicius.png", // Gerar nova imagem
+    imagem: "public/Images/ferAvatar.png", // Gerar nova imagem
   },
   {
     id: 32,
@@ -319,7 +319,7 @@ export const missoes = [
     status: 'disponivel',
     x: 520,
     y: 460,
-    imagem: "public/Images/ProfVinicius.png", // Gerar nova imagem
+    imagem: "public/Images/Yngrid.png", // Gerar nova imagem
   },
   {
     id: 33,
@@ -329,7 +329,7 @@ export const missoes = [
     status: 'disponivel',
     x: 630,
     y: 490,
-    imagem: "public/Images/ProfVinicius.png", // Gerar nova imagem
+    imagem: "public/Images/LucasCraft.png",
   },
   {
     id: 34,
@@ -339,7 +339,7 @@ export const missoes = [
     status: 'disponivel',
     x: 670,
     y: 140,
-    imagem: "public/Images/ProfVinicius.png", // Gerar nova imagem
+    imagem: "public/Images/Joyce.png", // Gerar nova imagem
   },
   {
     id: 35,
@@ -349,7 +349,7 @@ export const missoes = [
     status: 'disponivel',
     x: 720,
     y: 200,
-    imagem: "public/Images/ProfVinicius.png", // Gerar nova imagem
+    imagem: "public/Images/Vitoria.png",
   },
   {
     id: 36,
@@ -359,7 +359,7 @@ export const missoes = [
     status: 'disponivel',
     x: 610,
     y: 320,
-    imagem: "public/Images/ProfVinicius.png", // Gerar nova imagem
+    imagem: "public/Images/Plinio.png",
   },
   {
     id: 37,
@@ -379,7 +379,7 @@ export const missoes = [
     status: 'disponivel',
     x: 670,
     y: 260,
-    imagem: "public/Images/ProfVinicius.png", // Gerar nova imagem
+    imagem: "public/Images/Luca.png",
   },
   {
     id: 39,
@@ -389,7 +389,7 @@ export const missoes = [
     status: 'disponivel',
     x: 730,
     y: 340,
-    imagem: "public/Images/ProfVinicius.png", // Gerar nova imagem
+    imagem: "public/Images/Willson.png",
   },
   {
     id: 40,
@@ -399,7 +399,7 @@ export const missoes = [
     status: 'disponivel',
     x: 770,
     y: 420,
-    imagem: "public/Images/ProfVinicius.png", // Gerar nova imagem
+    imagem: "public/Images/Evellyn.png", // Gerar nova imagem
   },
   {
     id: 41,
@@ -409,7 +409,7 @@ export const missoes = [
     status: 'disponivel',
     x: 710,
     y: 470,
-    imagem: "public/Images/ProfVinicius.png", // Gerar nova imagem
+    imagem: "public/Images/Leo.png",
   },
   {
     id: 42,
@@ -419,7 +419,7 @@ export const missoes = [
     status: 'disponivel',
     x: 805,
     y: 280,
-    imagem: "public/Images/ProfVinicius.png", // Gerar nova imagem
+    imagem: "public/Images/Giovanna.png",
   },
   {
     id: 43,
@@ -429,7 +429,7 @@ export const missoes = [
     status: 'disponivel',
     x: 840,
     y: 340,
-    imagem: "public/Images/ProfVinicius.png", // Gerar nova imagem
+    imagem: "public/Images/Gabs.png", // Gerar nova imagem
   },
   {
     id: 44,
@@ -439,7 +439,7 @@ export const missoes = [
     status: 'disponivel',
     x: 840,
     y: 440,
-    imagem: "public/Images/ProfVinicius.png", // Gerar nova imagem
+    imagem: "public/Images/Thifs.png", // Gerar nova imagem
   },
   {
     id: 45,
@@ -449,7 +449,7 @@ export const missoes = [
     status: 'disponivel',
     x: 900,
     y: 280,
-    imagem: "public/Images/ProfVinicius.png", // Gerar nova imagem
+    imagem: "public/Images/Francis.png", // Gerar nova imagem
   },
   {
     id: 46,
@@ -459,17 +459,17 @@ export const missoes = [
     status: 'disponivel',
     x: 830,
     y: 170,
-    imagem: "public/Images/ProfVinicius.png", // Gerar nova imagem
+    imagem: "public/Images/Pedro.png", // Gerar nova imagem
   },
   {
     id: 47,
     titulo: "SENAICraft",
-    descricao: "Quem foi o(a) primeiro(a) aluno(a) a ganhar uma área na Bosch? Dica: não é o Lucas, Vinicius e Pedro.",
-    respostaCorreta: "Duda",
+    descricao: "Quem era o(a) instrutor(a) que passava DDS para as turmas?",
+    respostaCorreta: "Paulinho",
     status: 'disponivel',
     x: 750,
     y: 120,
-    imagem: "public/Images/ProfVinicius.png", // Gerar nova imagem
+    imagem: "public/Images/Paulinho.png",
   },
   {
     id: 48,
@@ -479,7 +479,7 @@ export const missoes = [
     status: 'disponivel',
     x: 820,
     y: 70,
-    imagem: "public/Images/ProfVinicius.png", // Gerar nova imagem
+    imagem: "public/Images/Yngrid.png", // Gerar nova imagem
   },
   {
     id: 49,
@@ -489,7 +489,7 @@ export const missoes = [
     status: 'disponivel',
     x: 50,
     y: 130,
-    imagem: "public/Images/ProfVinicius.png", // Gerar nova imagem
+    imagem: "public/Images/Nicolas.png", // Gerar nova imagem
   },
   {
     id: 50,
@@ -499,6 +499,6 @@ export const missoes = [
     status: 'disponivel',
     x: 220,
     y: 230,
-    imagem: "public/Images/ProfVinicius.png", // Gerar nova imagem
+    imagem: "public/Images/Lucas_Ghost.png", // Gerar nova imagem
   },
 ];
