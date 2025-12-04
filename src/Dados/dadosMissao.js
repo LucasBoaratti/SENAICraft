@@ -264,12 +264,12 @@ export const missoes = [
   {
     id: 27,
     titulo: "SENAICraft",
-    descricao: "'Ó ele(a) aí ó' qual aluno(a) ou professor(a) que fala essa frase?",
-    respostaCorreta: "Lindomar",
+    descricao: "Quem é o(a) professor(a) mais engraçado(a) da DS15?",
+    respostaCorreta: "Fernanda",
     status: 'disponivel',
     x: 470,
     y: 390,
-    imagem: "public/Images/BeautifulSea.png", // Gerar nova imagem
+    imagem: "public/Images/Fernanda.png",
   },
   {
     id: 28,
@@ -304,12 +304,12 @@ export const missoes = [
   {
     id: 31,
     titulo: "SENAICraft",
-    descricao: "Quem é o(a) aluno(a) ou professor(a) que coloca música na sala da DS-15?",
-    respostaCorreta: "Fernanda",
+    descricao: "Quem é o(a) instrutor(a) ou estagiário(a) mais sombrio do DTA?",
+    respostaCorreta: "Enzo",
     status: 'disponivel',
     x: 670,
     y: 60,
-    imagem: "public/Images/ferAvatar.png", // Gerar nova imagem
+    imagem: "public/Images/Enzo.png",
   },
   {
     id: 32,
@@ -319,7 +319,7 @@ export const missoes = [
     status: 'disponivel',
     x: 520,
     y: 460,
-    imagem: "public/Images/Yngrid.png", // Gerar nova imagem
+    imagem: "public/Images/GriGri.png",
   },
   {
     id: 33,
@@ -334,12 +334,12 @@ export const missoes = [
   {
     id: 34,
     titulo: "SENAICraft",
-    descricao: "'OLOKO!' qual aluno(a) ou professor(a) fala essa palavra?",
-    respostaCorreta: "Joyce",
+    descricao: "Quem foi o(a) instrutor(a) ou estagiário(a) que deu bronca na DS-15?",
+    respostaCorreta: "Augusto",
     status: 'disponivel',
     x: 670,
     y: 140,
-    imagem: "public/Images/Joyce.png", // Gerar nova imagem
+    imagem: "public/Images/Augusto.png",
   },
   {
     id: 35,
@@ -369,7 +369,7 @@ export const missoes = [
     status: 'disponivel',
     x: 650,
     y: 400,
-    imagem: "public/Images/ProfVinicius.png", // Gerar nova imagem
+    imagem: "public/Images/Fuzari.png",
   },
   {
     id: 38,
@@ -399,7 +399,7 @@ export const missoes = [
     status: 'disponivel',
     x: 770,
     y: 420,
-    imagem: "public/Images/Evellyn.png", // Gerar nova imagem
+    imagem: "public/Images/Evellyn2.png",
   },
   {
     id: 41,
@@ -429,7 +429,7 @@ export const missoes = [
     status: 'disponivel',
     x: 840,
     y: 340,
-    imagem: "public/Images/Gabs.png", // Gerar nova imagem
+    imagem: "public/Images/Gabriela.png",
   },
   {
     id: 44,
@@ -439,7 +439,7 @@ export const missoes = [
     status: 'disponivel',
     x: 840,
     y: 440,
-    imagem: "public/Images/Thifs.png", // Gerar nova imagem
+    imagem: "public/Images/Thifany.png",
   },
   {
     id: 45,
@@ -454,12 +454,12 @@ export const missoes = [
   {
     id: 46,
     titulo: "SENAICraft",
-    descricao: "Quem é o(a) aluno(a) que vai embora mais cedo da Bosch?",
+    descricao: "Quem é o(a) aluno(a) que mora no 'fim do mundo', vulgo Arthur Nogueira?",
     respostaCorreta: "Pedro",
     status: 'disponivel',
     x: 830,
     y: 170,
-    imagem: "public/Images/Pedro.png", // Gerar nova imagem
+    imagem: "public/Images/Pedro2.png",
   },
   {
     id: 47,
@@ -479,7 +479,7 @@ export const missoes = [
     status: 'disponivel',
     x: 820,
     y: 70,
-    imagem: "public/Images/Yngrid.png", // Gerar nova imagem
+    imagem: "public/Images/Yngrid2.png",
   },
   {
     id: 49,
@@ -489,7 +489,7 @@ export const missoes = [
     status: 'disponivel',
     x: 50,
     y: 130,
-    imagem: "public/Images/Nicolas.png", // Gerar nova imagem
+    imagem: "public/Images/Nicolas2.png",
   },
   {
     id: 50,
@@ -499,6 +499,6 @@ export const missoes = [
     status: 'disponivel',
     x: 220,
     y: 230,
-    imagem: "public/Images/Lucas_Ghost.png", // Gerar nova imagem
+    imagem: "public/Images/Lucas_Ghost.png",
   },
 ];
