@@ -499,6 +499,6 @@ export const missoes = [
     status: 'disponivel',
     x: 220,
     y: 230,
-    imagem: "public/Images/Lucas_Ghost.png",
+    imagem: "public/Images/LucasGuardiãoEquilibrio.png",
   },
 ];

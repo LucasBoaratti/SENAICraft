@@ -5,6 +5,7 @@ import { Perguntas} from "../Paginas/Perguntas";
 import { Inventario } from "../Paginas/Inventario";
 import { Galeria } from "../Paginas/Galeria";
 import { Introducao } from "../Paginas/Introducao";
+import { GeoLocalizacao } from "../Paginas/GeoLocalizacao";
 
 export function Rotas() {
     return (
@@ -15,6 +16,7 @@ export function Rotas() {
                 <Route path="perguntas" element={<Perguntas/>} />
                 <Route path="inventario" element={<Inventario/>} />
                 <Route path="camera" element={<Galeria/>} />
+                <Route path="geolocalizacao" element={<GeoLocalizacao/>} />
             </Route>
         </Routes>
     );

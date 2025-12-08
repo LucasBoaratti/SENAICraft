@@ -27,7 +27,7 @@ import Tata from "../assets/Images/Tata.webp";
 import Adegas from "../assets/Images/Adegas.webp";
 import Vinicius from "../assets/Images/Vinicius.png";
 import Agatha from "../assets/Images/AgathaFreitax.webp";
-import Francis from "../assets/Images/Fracis.png";
+import Francis from "../assets/Images/Francis.png";
 import Cleber from "../assets/Images/Clebinho.webp";
 import Vanessa from "../assets/Images/Nessa.webp";
 import Vitoria from "../assets/Images/Favaro.webp";
@@ -37,7 +37,10 @@ import Luca from "../assets/Images/Luquinha.webp";
 import Willson from "../assets/Images/Will.webp";
 import Leonardo from "../assets/Images/Leonardo.webp";
 import Giovanna from "../assets/Images/Gigi.png";
-import Francis from "../assets/Images/Francis.png";
+import FrancisFranquini from "../assets/Images/Francis.png";
+import Paulinho from "../assets/Images/Paulo.webp";
+import Augusto from "../assets/Images/Augusto.png";
+import Enzinho from "../assets/Images/Enzinho.png";
 
 // Schema de validação com o Zod
 const schemaResposta = z.object({
@@ -79,14 +82,14 @@ const imagensAcerto = {
   24: Vinicius,
   25: Modesto,
   26: Agatha,
-  27: Lindomar,
+  27: Fer,
   28: Francis,
   29: Cleber,
   30: Vanessa,
-  31: Fer,
+  31: Enzinho,
   32: Gri,
   33: Lucas,
-  34: Jokita,
+  34: Augusto,
   35: Vitoria,
   36: Plinio,
   37: Fuzari,
@@ -97,9 +100,9 @@ const imagensAcerto = {
   42: Giovanna,
   43: Gabriela,
   44: Thifs,
-  45: Francis,
+  45: FrancisFranquini,
   46: Pedrinho,
-  47: Duda,
+  47: Paulinho,
   48: Gri,
   49: Nico,
   50: Lucas,
@@ -146,6 +149,7 @@ export function PerguntasModal({ missao, onClose, onConcluir }) {
         onConcluir(missao.id);
       }, 2500);
     } else {
+      setResultado("Resposta incorreta! Tente novamente.");
       setStatus("erro");
     }
   }

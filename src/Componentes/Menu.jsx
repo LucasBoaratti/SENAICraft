@@ -16,10 +16,9 @@ export function Menu() {
         navigate("inventario");
     }
 
-    // -- Função para avançar para a página de geolocalização será adicionada em breve --
-    // function avancarPaginaInventario() {
-    //     navigate("geoLocalizacao");
-    // }
+    function avancarPaginaGeoLocalizacao() {
+        navigate("geoLocalizacao");
+    }
 
     function avancarPaginaCamera() {
         navigate("camera");
@@ -46,8 +45,11 @@ export function Menu() {
                     <p className="texto">Inventário</p>
                     <img src={Inventario} alt="Saco com itens (Trouxa)." className="imagemOpcao" />
                 </div>
-                {/* Terá o onClick em breve... */}
-                <div className="geoLocalizacao" aria-label="Abrir geo-localização" role="button" tabIndex="0"> 
+                <div className="geoLocalizacao" aria-label="Abrir geo-localização" role="button" tabIndex="0" onClick={avancarPaginaGeoLocalizacao} onKeyDown={(e) => {
+                    if (e.key === "Enter") {
+                        avancarPaginaGeoLocalizacao();
+                    }
+                }}> 
                     <p className="texto">GeoLocalização</p>
                     <img src={GeoLocalizacao} alt="Mapa com riscos pretos." className="imagemOpcao" />
                 </div>
