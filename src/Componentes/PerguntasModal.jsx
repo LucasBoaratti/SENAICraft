@@ -26,6 +26,18 @@ import Lucas from "../assets/Images/Lucas.jpg";
 import Tata from "../assets/Images/Tata.webp";
 import Adegas from "../assets/Images/Adegas.webp";
 import Vinicius from "../assets/Images/Vinicius.png";
+import Agatha from "../assets/Images/AgathaFreitax.webp";
+import Francis from "../assets/Images/Fracis.png";
+import Cleber from "../assets/Images/Clebinho.webp";
+import Vanessa from "../assets/Images/Nessa.webp";
+import Vitoria from "../assets/Images/Favaro.webp";
+import Plinio from "../assets/Images/Gabriel.png";
+import Fuzari from "../assets/Images/Fuzuario.webp";
+import Luca from "../assets/Images/Luquinha.webp";
+import Willson from "../assets/Images/Will.webp";
+import Leonardo from "../assets/Images/Leonardo.webp";
+import Giovanna from "../assets/Images/Gigi.png";
+import Francis from "../assets/Images/Francis.png";
 
 // Schema de validação com o Zod
 const schemaResposta = z.object({
@@ -35,7 +47,7 @@ const schemaResposta = z.object({
     .max(15, "A resposta não pode passar de 15 caracteres.")
     .regex(
       /^[A-Za-z]+$/, {
-        message: "Por favor, digite até 15 caracteres, sendo maiúsculos e minúsculos.",
+        message: "Por favor, digite até 15 caracteres.",
     }),
 });
 
@@ -66,26 +78,26 @@ const imagensAcerto = {
   23: Vinicius,
   24: Vinicius,
   25: Modesto,
-  // 26: Agatha,
+  26: Agatha,
   27: Lindomar,
-  // 28: Francis,
-  // 29: Cleber,
-  // 30: Vanessa,
+  28: Francis,
+  29: Cleber,
+  30: Vanessa,
   31: Fer,
   32: Gri,
   33: Lucas,
   34: Jokita,
-  // 35: Vitoria,
-  // 36: Plinio,
-  // 37: Fuzari,
-  // 38: Luca,
-  // 39: Willson,
+  35: Vitoria,
+  36: Plinio,
+  37: Fuzari,
+  38: Luca,
+  39: Willson,
   40: Eve,
-  // 41: Leonardo,
-  // 42: Giovanna,
+  41: Leonardo,
+  42: Giovanna,
   43: Gabriela,
   44: Thifs,
-  // 45: Francis,
+  45: Francis,
   46: Pedrinho,
   47: Duda,
   48: Gri,

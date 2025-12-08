@@ -239,7 +239,7 @@ export const missoes = [
     status: 'disponivel',
     x: 610,
     y: 180,
-    imagem: "public/Images/ProfVinicius.png", // Gerar nova imagem
+    imagem: "public/Images/ViniciusProf.png",
   },
   {
     id: 25,
@@ -249,7 +249,7 @@ export const missoes = [
     status: 'disponivel',
     x: 570,
     y: 260,
-    imagem: "public/Images/michel.png", // Gerar nova imagem
+    imagem: "public/Images/MichelModesto.png",
   },
   {
     id: 26,
@@ -449,7 +449,7 @@ export const missoes = [
     status: 'disponivel',
     x: 900,
     y: 280,
-    imagem: "public/Images/Francis.png", // Gerar nova imagem
+    imagem: "public/Images/FrancisFranquini.png",
   },
   {
     id: 46,
