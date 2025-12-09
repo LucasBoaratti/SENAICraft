@@ -3,20 +3,10 @@ import L from "leaflet"; // Objeto principal da bilbioteca leaflet
 import "leaflet/dist/leaflet.css";
 import "leaflet-routing-machine";
 import "leaflet-routing-machine/dist/leaflet-routing-machine.css";
-import markerIcon from "leaflet/dist/images/marker-icon.png";
-import markerIcon2x from "leaflet/dist/images/marker-icon-2x.png";
-import markerShadow from "leaflet/dist/images/marker-shadow.png";
-
-L.Icon.Default.mergeOptions({
-  iconRetinaUrl: markerIcon2x,
-  iconUrl: markerIcon,
-  shadowUrl: markerShadow,
-});
 
 export function GeoLocalizacao() {
     const mapRef = useRef(null);
     const rotaRef = useRef(null);
-    const [erros, setErros] = useState({});
 
     const [form, setForm] = useState({
         lat1: "",
@@ -25,6 +15,8 @@ export function GeoLocalizacao() {
         lng2: "",
     });
 
+    const [erros, setErros] = useState({});
+
     useEffect(() => {
         if (mapRef.current) return;
 
@@ -32,12 +24,8 @@ export function GeoLocalizacao() {
         mapRef.current = mapa;
 
         L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-            maxZoom: 20,
+            maxZoom: 19,
         }).addTo(mapa);
-
-        return () => {
-            mapa.remove();
-        }
     }, []);
 
     // Função que valida os campos de latitude e longitude da origem
@@ -76,16 +64,10 @@ export function GeoLocalizacao() {
         const p1 = L.latLng(lat1, lng1);
         const p2 = L.latLng(lat2, lng2);
 
-        if (rotaRef.current) {
-            rotaRef.current.remove(); // Se o usuário gerar uma nova rota, precisamos limpar a antiga para não desenhar várias rotas sobre o mapa
-            rotaRef.current = null;
-        }
+        if (rotaRef.current) rotaRef.current.remove(); // Se o usuário gerar uma nova rota, precisamos limpar a antiga para não desenhar várias rotas sobre o mapa
 
         rotaRef.current = L.Routing.control({
             waypoints: [p1, p2], // Os pontos da rota
-            router: L.Routing.osrmv1({
-                serviceUrl: "https://router.project-osrm.org/route/v1",
-            }),
             show: false, // Oculta o painel lateral de direções
             addWaypoints: false,
             draggableWaypoints: false, // Evita edição da rota via UI
@@ -125,43 +107,49 @@ export function GeoLocalizacao() {
     }
 
     return (
-        <main className="sessaoMapa">
-            <form className="formMapa" onSubmit={gerarRota}>
-                <h2>Gerar rota</h2>
-                {/* Origem */}
-                <fieldset>
-                    <legend>Origem</legend>
+        <main className="containerMapa">
+            <section className="sessaoMapa">
+                <form className="formMapa" onSubmit={gerarRota}>
+                    <h1 className="tituloGeolocalizacao">GeoLocalização</h1>
+                    {/* Origem */}
+                    <div className="coordenadasOrigem">
+                        <legend className="origem">Origem</legend>
 
-                    <label htmlFor="lat1">Latitude</label>
-                    <input type="number" name="lat1" step="any" value={form.lat1} onChange={(e) => setForm({ ...form, lat1: e.target.value })} className="caixaTexto" />
-                    {erros.lat1 && <p className="error">{erros.lat1}</p>}
+                        <label>Latitude</label>
+                        <input type="number" name="lat1" step="any" value={form.lat1} onChange={(e) => setForm({ ...form, lat1: e.target.value })} className="caixaTexto" placeholder="Ex: 00,000000" />
+                        {erros.lat1 && <p className="error">{erros.lat1}</p>}
 
-                    <label htmlFor="lng1">Longitude</label>
-                    <input type="number" name="lng1" step="any" value={form.lng1} onChange={(e) => setForm({ ...form, lng1: e.target.value })} />
-                    {erros.lng1 && <p className="error">{erros.lng1}</p>}
+                        <label>Longitude</label>
+                        <input type="number" name="lng1" step="any" value={form.lng1} onChange={(e) => setForm({ ...form, lng1: e.target.value })} className="caixaTexto" placeholder="Ex: 00,000000" />
+                        {erros.lng1 && <p className="error">{erros.lng1}</p>}
 
-                    <button type="button" className="btnLocal" onClick={localizacaoOrigem}>Usar minha localização atual</button>
-                </fieldset>
-                {/* Destino */}
-                <fieldset>
-                    <legend>Destino</legend>
+                        <div className="botaoLocal">
+                            <button type="button" className="btnLocal" onClick={localizacaoOrigem}>Usar minha localização atual</button>
+                        </div>
+                    </div>
+                    {/* Destino */}
+                    <div className="coordenadasDestino">
+                        <legend className="destino">Destino</legend>
 
-                    <label htmlFor="lat2">Latitude</label>
-                    <input type="number" name="lat2" step="any" value={form.lat2} onChange={(e) => setForm({ ...form, lat2: e.target.value })} className="caixaTexto" />
-                    {erros.lat2 && <p className="error">{erros.lat2}</p>}
+                        <label>Latitude</label>
+                        <input type="number" name="lat2" step="any" value={form.lat2} onChange={(e) => setForm({ ...form, lat2: e.target.value })} className="caixaTexto" placeholder="Ex: 00,000000" />
+                        {erros.lat2 && <p className="error">{erros.lat2}</p>}
 
-                    <label htmlFor="lng2">Longitude</label>
-                    <input type="number" name="lng2" step="any" value={form.lng2} onChange={(e) => setForm({ ...form, lng2: e.target.value })} />
-                    {erros.lng2 && <p className="error">{erros.lng2}</p>}
+                        <label>Longitude</label>
+                        <input type="number" name="lng2" step="any" value={form.lng2} onChange={(e) => setForm({ ...form, lng2: e.target.value })} className="caixaTexto" placeholder="Ex: 00,000000" />
+                        {erros.lng2 && <p className="error">{erros.lng2}</p>}
 
-                    <button type="button" className="btnLocal" onClick={localizacaoDestino}>Usar minha localização atual</button>
-                </fieldset>
-                <div className="botao">
-                    <button type="submit" className="btnGerar">Gerar rota</button>
-                </div>
-            </form>
+                        <div className="botaoLocal">
+                            <button type="button" className="btnLocal" onClick={localizacaoDestino}>Usar minha localização atual</button>
+                        </div>
+                    </div>
+                    <div className="botao">
+                        <button type="submit" className="btnGerar">Gerar rota</button>
+                    </div>
+                </form>
 
-            <div id="mapa" className="mapaContainer"></div>
+                <div id="mapa" className="mapaContainer"></div>
+            </section>
         </main>
     );
 }

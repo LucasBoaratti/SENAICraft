@@ -1,0 +1,151 @@
+// Importando as variáveis global
+@use './variaveis' as *;
+
+// Estilizando o mapa e a geolocalização
+.containerMapa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .sessaoMapa {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3.125rem;
+        background-color: $bloco-diamante;
+        border-radius: 1.5625rem;
+        padding: 15px;
+        width: 75rem;
+
+        .formMapa {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: $netherrack;
+            border-radius: 1.5625rem;
+            color: $cor-fonte-clara;
+            padding: 10px;
+
+            .tituloGeolocalizacao {
+                text-align: center;
+                font-family: $fonte-titulos;
+            }
+
+            .coordenadasOrigem {
+                display: flex;
+                flex-direction: column;
+                align-items: left;
+                justify-items: center;
+                width: 25rem;
+                padding: 10px;
+
+                .origem {
+                    font-size: 1.25rem;
+                    text-align: center;
+                }
+
+                .caixaTexto {
+                    height: 2.1875rem;
+                    font-size: 1rem;
+                    padding-left: 4px;
+                    outline: none;
+                    border: none;
+                    border-radius: 15px;
+                }
+
+                .error {
+                    color: $cor-fonte-clara;
+                }
+
+                .botaoLocal {
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 10px;
+
+                    .btnLocal {
+                        background-color: $verde-limao;
+                        color: $cor-fonte-escura;
+                        border-radius: 15px;
+                        border: none;
+                        width: 14.375rem;
+                        height: 1.875rem;
+                        font-size: 1rem;
+                        transition: background-color 0.2s ease;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .coordenadasDestino {
+                display: flex;
+                flex-direction: column;
+                align-items: left;
+                justify-items: center;
+                width: 25rem;
+                padding: 10px;
+
+                .destino {
+                    font-size: 1.25rem;
+                    text-align: center;
+                }
+
+                .caixaTexto {
+                    height: 2.1875rem;
+                    font-size: 1rem;
+                    padding-left: 4px;
+                    outline: none;
+                    border: none;
+                    border-radius: 15px;
+                }
+
+                .error {
+                    color: $cor-fonte-clara;
+                }
+
+                .botaoLocal {
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 10px;
+
+                    .btnLocal {
+                        background-color: $verde-limao;
+                        color: $cor-fonte-escura;
+                        border-radius: 15px;
+                        border: none;
+                        width: 14.375rem;
+                        height: 1.875rem;
+                        font-size: 1rem;
+                        transition: background-color 0.2s ease;
+                        cursor: pointer;
+                    }
+                }
+            }
+            
+            .botao {
+                display: flex;
+                justify-content: center;
+                margin-top: 5px;
+
+                .btnGerar {
+                    background-color: $verde-limao;
+                    color: $cor-fonte-escura;
+                    border-radius: 15px;
+                    border: none;
+                    width: 7.5rem;
+                    height: 1.875rem;
+                    font-size: 1rem;
+                    transition: background-color 0.2s ease;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .mapaContainer {
+            height: 34.375rem;
+            width: 56.25rem;
+            border-radius: 1.5625rem;
+            box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.7);
+        }
+    }
+}
